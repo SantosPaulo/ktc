@@ -2,8 +2,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { TesteComponent } from '../../teste/teste.component';
 
-const routes: Routes = [
+export default [
   { path: '', component: TesteComponent }
 ];
-
-export default routes;
