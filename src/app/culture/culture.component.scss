@@ -1,0 +1,30 @@
+#culture {
+  h2 {
+    font-size: 29px;
+    text-transform: uppercase
+  }
+  ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+
+    li {
+      margin-left: 5px;
+      display: inline-block;
+      float: none;
+
+      &:not(:first-child):before {
+        content: '|'
+      }
+
+      a {
+        text-decoration: none;
+
+        &:link {
+          outline: none
+        }
+      }
+    }
+  }
+}

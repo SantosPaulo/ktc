@@ -1,0 +1,13 @@
+<div id="culture">
+  <div *ngIf="cultureLanguages.length">
+    <h2>{{ cultureGreeting }}</h2>
+    <ul>
+      <li *ngFor="let language of cultureLanguages">
+        <a routerLink="/{{ language }}/welcome"
+           (click)="setCulture(language)">
+          {{ language }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
