@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AppRootComponent {
 
   private culture: string;
-  private defaultCulture: string = 'us';
+  private defaultCulture = 'us';
 
   constructor(private router: Router) {
     this.fallbackCulture();
@@ -22,7 +22,7 @@ export class AppRootComponent {
    */
   fallbackCulture(): void {
     const culture = localStorage.getItem('culture');
-    if (!culture || culture == 'undefined') {
+    if (!culture || culture === 'undefined') {
       localStorage.setItem('culture', this.defaultCulture);
       this.culture = this.defaultCulture;
     } else {

@@ -15,7 +15,7 @@ export class CulturesService {
    * @return {Culture}
    */
   filterCulture(culture: string): Culture {
-    const foundedCulture = CULTURES.filter(c => c.culture == culture);
+    const foundedCulture = CULTURES.filter(c => c.culture === culture);
     return foundedCulture[0];
   }
 
