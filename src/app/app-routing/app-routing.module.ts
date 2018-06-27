@@ -1,15 +1,9 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { CultureComponent } from '../culture/culture.component';
-
-const routes: Routes = [
- { path: '', component: CultureComponent },
- { path: ':culture/welcome', component: CultureComponent },
-];
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './routes';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(ROUTES)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
