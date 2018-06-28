@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CulturesService } from '../services/cultures.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-culture',
@@ -15,6 +16,7 @@ export class CultureComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private cultureService: CulturesService
   ) {
     this.currentCulture = route.snapshot.paramMap.get('culture');
@@ -40,5 +42,6 @@ export class CultureComponent implements OnInit {
     localStorage.setItem('culture', culture);
     this.currentCulture = culture;
     this.initCulture();
+    this.router.navigate([ `/${culture}/welcome` ]);
   }
 }
